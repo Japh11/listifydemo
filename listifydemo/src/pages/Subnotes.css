@@ -1,0 +1,81 @@
+/* subnotes.css */
+
+/* Styling for subnotes section under tasks */
+.subnotes-section {
+    padding: 6px;
+    background-color: #2B3931;
+    border: 1px solid #2B3931;
+    border-radius: 8px;
+    width: 99.23%;
+    margin-bottom: 10px;
+    margin: 0px 5px 0px 5px;
+  }
+  
+  .subnotes-section h4 {
+    font-size: 20px;
+    color: #A7BEB5;
+    margin-left: 10px;
+  }
+  
+  .subnotes-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .subnote-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .subnote-item p {
+    margin: 0;
+  }
+  
+  .subnote-item button {
+    background-color: #ff4d4f;
+    color: #ffffff;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .subnote-item button:hover {
+    background-color: #e33d3f;
+  }
+  
+  /* Styling for subnote input section */
+  .subnote-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .subnote-input input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #3a5247;
+    outline: none;
+  }
+  
+  .subnote-input button {
+    padding: 8px 12px;
+    background-color: #3a5247;
+    color: #f2f5f4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .subnote-input button:hover {
+    background-color: #556d5a;
+  }
+  

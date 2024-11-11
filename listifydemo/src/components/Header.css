@@ -1,0 +1,99 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4A7652;
+    width: calc(100vw - 300px); /* Adjust width to account for sidebar */
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 300px; /* Align to the left of the sidebar */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.user-profile, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-profile img {
+    width: 500px; /* Increase logo size */
+    height: 500px; /* Increase logo size */
+    border-radius: 50%; /* Keep it circular */
+}
+
+.user-name {
+    font-size: 18px; /* Larger font size for better visibility */
+    font-weight: bold; /* Make the name bold */
+    color: #ffffff; /* Change text color to white for contrast */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.user-profile:hover .user-name {
+    color: #d8e3dc; /* Change color on hover for interactivity */
+}
+
+
+.header-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.header-right {
+    margin-left: auto; /* Pushes profile and notification to the right */
+}
+
+.notification-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; /* Adjust size of the emoji */
+    color: #ffffff; /* Ensure the emoji is visible */
+}
+
+.notification-btn:hover {
+    color: #d8e3dc; /* Change color on hover */
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    background-color: #a0b6b3;
+    overflow: hidden; /* Prevents scrolling */
+    padding-top: 100px; /* Space for fixed header */
+}
+
+.sidebar {
+    width: 300px; /* Fixed width for the sidebar */
+    background-color: #2f4239;
+    color: #d8e3dc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    height: 100vh; /* Full height for the sidebar */
+    position: fixed; /* Fixed position to stay in view */
+    top: 0; /* Aligns to the top */
+    left: 0; /* Aligns to the left */
+    z-index: 100; /* Keeps sidebar above main content */
+}
+
+.main-content {
+    flex: 1; /* Takes remaining space */
+    padding: 20px; /* Padding around main content */
+    background-color: #0c0e0d; /* Dark background for content */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    overflow-y: auto; /* Enables vertical scrolling */
+    margin-left: 300px; /* Leave space for sidebar */
+    padding-top: 20px; /* Additional padding for content below header */
+}
+
+

@@ -1,0 +1,386 @@
+/* Reset padding and margin for body and html */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.body {
+  padding: 0;
+  margin: 0;
+}
+
+/* General container styling */
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #a0b6b3;
+  overflow: hidden;
+}
+
+/* Styling for logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Adjust the logo size */
+.logo {
+  width: 150px;
+  height: 150px;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 300px;
+  background-color: #2f4239;
+  color: #d8e3dc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  width: 90%;
+}
+
+.sidebar li {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #d8e3dc;
+  display: block;
+  padding: 15px;
+  text-align: center;
+  border: 2px solid #3a5247;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.sidebar a.active-link, .sidebar a:hover {
+  background-color: #829d8d;
+}
+
+.sidebar a.active-link {
+  background-color: #A7BEB5;
+  color: #2B3931;
+  font-weight: bold;   
+  border-color: #A7BEB5;
+}
+
+/* Main content styling */
+.main-content {
+  position: relative;
+  flex: 1;
+  padding-bottom: 60px;
+  background-color: #a0b6b3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/* Task header styling */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  width: 172.2vh;
+  height: 100px;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 0;
+  background-color: #4A7652;
+  padding-left: 155vh;
+}
+
+.task-header h1 {
+  font-size: 28px;
+  color: #2f4239;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Task list and items styling */
+.tasks-list {
+  width: 169vh;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0px 5px 0 5px;
+  margin-top: 10px;
+}
+
+.task-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Task header styling to align name and buttons */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Ensure buttons are properly spaced */
+.task-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.update-btn, .delete-btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #f2f5f4;
+}
+
+.update-btn {
+  background-color: #3a5247;
+}
+
+.delete-btn {
+  background-color: #a63c40;
+}
+
+/* Styling for subnotes section under tasks */
+.subnotes-section {
+  padding: 6px;
+  background-color: #2B3931;
+  border: 1px solid #2B3931;
+  border-radius: 8px;
+  width: 99.23%;
+  margin-bottom: 10px;
+  margin: 0px 5px 0px 5px;
+}
+
+.edit-btn2 {
+  background-color: #ffc107;
+  color: #2f4239;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-btn2:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+.delete-btn2 {
+  background-color: #dc3545;
+  color: #ffffff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-btn2:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.subnotes-section h4 {
+  font-size: 20px;
+  color: #A7BEB5;
+  margin-left: 10px;
+}
+
+.subnotes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.subnote-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.subnote-item p {
+  margin: 0;
+}
+
+.subnote-item button {
+  background-color: #ff4d4f;
+  color: #ffffff;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.subnote-item button:hover {
+  background-color: #e33d3f;
+}
+
+/* Styling for subnote input section */
+.subnote-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.subnote-input input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #3a5247;
+  outline: none;
+}
+
+.subnote-input button {
+  padding: 8px 12px;
+  background-color: #3a5247;
+  color: #f2f5f4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subnote-input button:hover {
+  background-color: #556d5a;
+}
+
+/* Styling for the todo input area */
+.todo-input {
+  position: fixed;
+  bottom: 0;
+  left: 300px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #a0b6b3;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Styling for the text input area */
+.todo-input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #3a5247;
+}
+
+/* Position the add button to the left of the text input */
+.todo-input button {
+  padding: 10px 15px;
+  background-color: #3a5247;
+  color: #f2f5f4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo-input button:hover {
+  background-color: #556d5a;
+}
+
+/* Adjust styling of select dropdown in the add task area */
+.todo-input select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #3a5247;
+  background-color: #f2f5f4;
+}
+
+/* Dropdown for assigning a task */
+.assign-task-dropdown {
+  position: absolute;
+  background-color: #f2f5f4;
+  border: 1px solid #3a5247;
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  display: none;
+}
+
+.assign-task-dropdown h4 {
+  font-size: 14px;
+  color: #2f4239;
+  margin-bottom: 10px;
+}
+
+.assign-task-dropdown select, .assign-task-dropdown button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #3a5247;
+}
+
+.assign-task-dropdown button {
+  background-color: #3a5247;
+  color: #f2f5f4;
+  border: none;
+  cursor: pointer;
+}
+
+.assign-task-dropdown button:hover {
+  background-color: #556d5a;
+}
+
+.assign-task-dropdown .cancel-btn {
+  background-color: #a63c40;
+  margin-top: 5px;
+}

@@ -1,0 +1,99 @@
+/* src/pages/Home.css */
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f6f9; /* Light background color for contrast */
+    font-family: 'Arial', sans-serif; /* Use a clean, modern font */
+}
+
+.home-header {
+    margin-bottom: 20px;
+    text-align: center; /* Center the text and logo */
+}
+
+.home-header h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.home-header p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center; /* Center-align the logo */
+}
+
+.home-intro {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    max-width: 1200px; /* Limit max width */
+    margin: 40px 0;
+}
+
+.feature {
+    flex: 1 1 30%; /* Flexible width with minimum size */
+    margin: 10px; /* Space between features */
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff; /* White background for features */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.feature:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.feature h2 {
+    font-size: 1.5em;
+    color: #4CAF50; /* Green color for headings */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.feature p {
+    font-size: 1em;
+    color: #555;
+}
+
+.cta-section {
+    margin-top: 40px;
+}
+
+.cta-button, .logout-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px; /* Space between buttons */
+}
+
+.cta-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.logout-button {
+    background-color: #dc3545; /* Red background for logout */
+}
+
+.logout-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.home-footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #888;
+}

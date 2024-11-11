@@ -1,0 +1,228 @@
+.calendar {
+    background-color: #f0f8f1;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+ 
+/* Calendar styling */
+.rbc-calendar {
+    border: none;
+    color: #2d4033;
+}
+ 
+.rbc-header {
+    background-color: #4caf50; /* Green header */
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 0;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+ 
+/* Day cells */
+.rbc-date-cell {
+    font-weight: bold;
+    color: #2d4033;
+}
+ 
+.rbc-day-bg {
+    transition: background-color 0.3s ease;
+}
+ 
+.rbc-day-bg:hover {
+    background-color: #e3f9e5;
+    cursor: pointer;
+}
+ 
+/* Highlighted days */
+.rbc-selected-cell {
+    background-color: #a5d6a7 !important; /* Light green for selected */
+}
+ 
+/* Event styling */
+.rbc-event {
+    background-color: #66bb6a; /* Medium green for events */
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    text-align: center;
+}
+ 
+/* Weekday names */
+.rbc-day-header {
+    color: #388e3c;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px;
+}
+ 
+/* Other months' days */
+.rbc-off-range-bg {
+    background-color: #eef6ee;
+}
+ 
+/* Today styling */
+.rbc-today {
+    background-color: #c8e6c9 !important; /* Light green for today */
+    border-radius: 8px;
+}
+ 
+/* Month and time selectors */
+.rbc-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #388e3c; /* Darker green */
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+}
+ 
+.rbc-toolbar button {
+    background-color: #66bb6a; /* Button color */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+ 
+.rbc-toolbar button:hover {
+    background-color: #81c784;
+}
+ 
+/* Calendar grid border */
+.rbc-month-view {
+    border-radius: 8px;
+    overflow: hidden;
+}
+/* Overlay background */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;  /* Center vertically */
+    justify-content: center;  /* Center horizontally */
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+ 
+/* Overlay background */
+.task-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Background dim */
+    z-index: 1000; /* Ensures it appears above other elements */
+}
+ 
+ 
+/* Modal box */
+.task-modal {
+    width: 300px; /* Adjust width as needed */
+    max-width: 90%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/* Modal title */
+.task-modal h3 {
+    margin-top: 0;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-align: center; /* Centered title */
+    font-size: 1.5em; /* Larger font size */
+}
+ 
+/* Input styling */
+.task-modal input,
+.task-modal select {
+    width: 100%;
+    padding: 12px; /* Increased padding for better usability */
+    margin-top: 15px; /* More spacing */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* More rounded edges */
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    transition: border 0.2s ease;
+}
+ 
+.task-modal input:focus,
+.task-modal select:focus {
+    border-color: #4caf50; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+ 
+/* Button styling */
+.task-modal button {
+    padding: 12px 18px; /* Increased padding */
+    margin: 15px 5px 0; /* More spacing */
+    border: none;
+    border-radius: 6px; /* Rounded edges */
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+ 
+/* Add Task button */
+.task-modal button:first-of-type {
+    background-color: #4CAF50; /* Primary button color */
+}
+ 
+/* Cancel button */
+.task-modal button:last-of-type {
+    background-color: #f44336; /* Danger color */
+}
+ 
+/* Button hover effects */
+.task-modal button:hover {
+    opacity: 0.9; /* Slightly transparent on hover */
+}
+ 
+/* Button active state */
+.task-modal button:active {
+    transform: scale(0.98); /* Slightly scale down when pressed */
+}
+ 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+ 
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
